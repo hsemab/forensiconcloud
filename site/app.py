@@ -27,19 +27,19 @@ def run():
             filename1 = secure_filename(file1.filename)
             file1.save(os.path.join(UPLOAD_FOLDER , filename1))
             path1=os.path.join(UPLOAD_FOLDER , filename1)
-            print(path1)
+            #print(path1)
             filename2 = secure_filename(file2.filename)
             file2.save(os.path.join(UPLOAD_FOLDER , filename2))
             path2=os.path.join(UPLOAD_FOLDER , filename2)
-            print(path2)
+            #print(path2)
             
             rmd2=runme_demo2.initialize()
             output4app=rmd2.runme_demo2(path1,path2)
-            print(output4app)
+            #print(output4app)
 
             return render_template("deneme.html", variable=output4app)
     elif request.method == 'GET':
         return render_template("hata.html")
 
 if __name__== "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=80)
