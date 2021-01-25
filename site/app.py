@@ -2,7 +2,7 @@ from flask import Flask,render_template,request,redirect,url_for
 from werkzeug.utils import secure_filename
 import sys, os
 from os import path
-import matlab
+#import matlab
 import runme_demo2
 
 rootdir = os.path.dirname(os.path.abspath(__file__))
